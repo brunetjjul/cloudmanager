@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>nw.js-examples | menu</title>
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>File processing</h2>
+            </div>
+            <div class="card-block">
+                Root folder:<input id="selectedFolder" readonly/><a href="javascript:openFolderExplorer()" class="btn btn-primary">Select</a>
+
+                <form>
+                    <div class="form-group">
+                        <input style="display:none;" type="file" id="folder" name="folder" nwdirectory />
+
+
+                    </div>
+                </form>
+                <div id="here_table">
+                    <table> </table>
+                </div>
+            </div>
+            <div class="card-block">
+                <label><input type="radio" name="optradio" checked>Merge files</label>
+                <label><input type="radio" name="optradio">Option 2</label>
+                <label><input type="radio" name="optradio">Option 3</label>
+
+            </div>
+            <div class="card-footer">
+                <a href="main.html" class="btn btn-primary btn-back">
+                    <i class="fa fa-chevron-left"></i>Back to home
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../app/file-processing.js"></script>
+</body>
+
+</html>

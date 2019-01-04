@@ -1,0 +1,27 @@
+{
+  "name": "nw.js-examples",
+  "version": "1.0.0",
+  "description": "nw.js features demonstrated in a simple project",
+  "license": "MIT",
+  "author": {
+    "name": "Julian Motz",
+    "url": "https://github.com/julmot"
+  },
+  "repository": {
+    "url": "https://github.com/brunetjjul/cloudmanager.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/julmot/nw.js-examples/issues"
+  },
+  "scripts": {
+    "debug": "nw src/ --remote-debugging-port=9229",
+    "dev": "nw  src/",
+    "prod": "nwbuild --platforms win32,win64 --buildDir dist/ src/"
+  },
+  "devDependencies": {
+    "nw": "0.35.3-sdk",
+    "nw-dev": "3.0.1",
+    "nw-builder": "^3.5.6"
+  }
+}
