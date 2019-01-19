@@ -4,8 +4,8 @@
   "description": "nw.js features demonstrated in a simple project",
   "main": "views/main.html",
   "window": {
-    "min_width": 400,
-    "min_height": 420,
+    "min_width": 800,
+    "min_height": 600,
     "icon": "assets/icon.png"
   },
   "maintainers": [
@@ -24,12 +24,13 @@
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/brunetjjul/cloudmanager.git" 
+      "url": "https://github.com/brunetjjul/cloudmanager.git"
     }
   ],
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.5",
     "font-awesome": "^4.7.0",
+    "fs-extra": "^7.0.1",
     "jquery": "^3.3.1"
   }
 }

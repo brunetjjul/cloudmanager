@@ -3,43 +3,87 @@
 
 <head>
     <meta charset="utf-8">
-    <title>nw.js-examples | menu</title>
+    <title>Cloud Manager</title>
     <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/file-processing.css">
 </head>
 
 <body>
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h2>File processing</h2>
+                <h2>File processing
+                    <a href="main.html" class="btn btn-primary btn-back float-right">
+                        <i class="fa fa-chevron-left"></i>Back
+                    </a></h2>
+
             </div>
-            <div class="card-block">
-                Root folder:<input id="selectedFolder" readonly/><a href="javascript:openFolderExplorer()" class="btn btn-primary">Select</a>
 
-                <form>
-                    <div class="form-group">
-                        <input style="display:none;" type="file" id="folder" name="folder" nwdirectory />
+            <div class="card-body">
 
+                <div class="card-block" style="display: flex">
+                    <a href="#" id="rootFolderSelect" class="btn btn-primary">Select root folder</a>
+                    <input style="flex: 1" id="rootFolder" class="ml-1" readonly/>
+                </div>
+
+                <div id="cardRootFolderContent" class="card mt-1 mb-1">
+                    <div class="card-header">
+                        <h6>Root Folder Content</h6>
+                    </div>
+                    <div id="divRootFolderContent" class="card-body table-wrapper-scroll-y">
+                    </div>
+                </div>
+
+                <div id="divOptions" class="card mt-1 mb-1">
+                    <div class="card-header">
+                        <h6>Options</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" value="merge" checked> Merge files
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" value="2">Option 2</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">Option 3</label>
+                        </div>
 
                     </div>
-                </form>
-                <div id="here_table">
-                    <table> </table>
+
                 </div>
-            </div>
-            <div class="card-block">
-                <label><input type="radio" name="optradio" checked>Merge files</label>
-                <label><input type="radio" name="optradio">Option 2</label>
-                <label><input type="radio" name="optradio">Option 3</label>
+                <div id="divMergeFiles" class="card mt-1 mb-1">
+                    <div class="card-header">
+                        <h6>Merge Files</h6>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="card-block" style="display: flex">
+                            <a href="#" id="mergeDestFolderSelect" class="btn btn-primary">Select target folder</a>
+                            <input style="flex: 1" id="mergeDestFolder" class="ml-1" readonly/>
+                        </div> 
+
+                        <div id="cardMergeFolderContent" class="card mt-1 mb-1">
+                            <div class="card-header">
+                                <h6>Target Folder Content</h6>
+                            </div>
+                            <div id="divMergeFolderContent" class="card-body table-wrapper-scroll-y">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
+
             <div class="card-footer">
-                <a href="main.html" class="btn btn-primary btn-back">
-                    <i class="fa fa-chevron-left"></i>Back to home
-                </a>
+                <button id="buttonProcess" type="button" class="btn btn-primary btn-lg btn-block">Launch processing</button>
             </div>
         </div>
     </div>
+    <div id="dummy" style="display:none;"></div>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/tether/dist/js/tether.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
