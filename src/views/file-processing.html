@@ -44,11 +44,8 @@
                             </label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" name="optradio" value="2">Option 2</label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio">Option 3</label>
-                        </div>
+                            <label><input type="radio" name="optradio" value="videoCompress">Video Compress</label>
+                        </div> 
 
                     </div>
 
@@ -69,6 +66,28 @@
                                 <h6>Target Folder Content</h6>
                             </div>
                             <div id="divMergeFolderContent" class="card-body table-wrapper-scroll-y">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div id="divVideoCompress" class="card mt-1 mb-1">
+                    <div class="card-header">
+                        <h6>Compress Videos</h6>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="card-block" style="display: flex">
+                            <a href="#" id="videoCompressDestFolderSelect" class="btn btn-primary">Select target folder</a>
+                            <input style="flex: 1" id="videoCompressDestFolder" class="ml-1" readonly/>
+                        </div> 
+
+                        <div id="cardVideoCompressContent" class="card mt-1 mb-1">
+                            <div class="card-header">
+                                <h6>Selected videos</h6>
+                            </div>
+                            <div id="divVideoCompressItems" class="card-body table-wrapper-scroll-y">
                             </div>
                         </div>
 
