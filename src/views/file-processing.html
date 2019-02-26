@@ -45,7 +45,7 @@
                         </div>
                         <div class="radio">
                             <label><input type="radio" name="optradio" value="videoCompress">Video Compress</label>
-                        </div> 
+                        </div>
 
                     </div>
 
@@ -59,7 +59,7 @@
                         <div class="card-block" style="display: flex">
                             <a href="#" id="mergeDestFolderSelect" class="btn btn-primary">Select target folder</a>
                             <input style="flex: 1" id="mergeDestFolder" class="ml-1" readonly/>
-                        </div> 
+                        </div>
 
                         <div id="cardMergeFolderContent" class="card mt-1 mb-1">
                             <div class="card-header">
@@ -81,11 +81,23 @@
                         <div class="card-block" style="display: flex">
                             <a href="#" id="videoCompressDestFolderSelect" class="btn btn-primary">Select target folder</a>
                             <input style="flex: 1" id="videoCompressDestFolder" class="ml-1" readonly/>
-                        </div> 
+                        </div>
 
                         <div id="cardVideoCompressContent" class="card mt-1 mb-1">
                             <div class="card-header">
-                                <h6>Selected videos</h6>
+
+                                <h6 class="d-inline">Selected videos</h6>
+
+                                <div class="d-inline pull-right align-top  ">
+                                    <div class="d-inline form-check">
+                                        <input type="checkbox" class="form-check-input  " id="checkFullScan">
+                                        <label class="form-check-label" for="exampleCheck1">Fullscan processing</label>
+                                    </div>
+                                    <a id="btnVideoCompressRemoveAll" href="#" id="videoCompressDestFolderSelects" class="d-inline btn btn-sm btn-dark">Remove
+                                        all
+                                    </a>
+                                </div>
+
                             </div>
                             <div id="divVideoCompressItems" class="card-body table-wrapper-scroll-y">
                             </div>
@@ -97,9 +109,9 @@
 
             </div>
 
-            <div class="card-footer">
-                <button id="buttonProcess" type="button" class="btn btn-primary btn-lg btn-block">Launch processing</button>
-            </div>
+            <div class="card-footer"> 
+                    <button id="buttonProcess" type="button" class="btn btn-primary btn-lg btn-block  "><i id="spinner" class="fa fa-cog "></i>Launch processing</button>
+             </div>
         </div>
     </div>
     <div id="dummy" style="display:none;"></div>
